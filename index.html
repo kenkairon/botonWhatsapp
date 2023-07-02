@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WhatsApp</title>
+  </head>
+  <body>
+    <section class="container">
+      <div class="row">
+        <div class="col-xl-12">
+          <button class="btn btn-success button" style="display: none;" onclick="openWhatsApp()">
+            <i class="bi bi-whatsapp"></i>  Whatsapp
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- WhatsApp Widget -->
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+    <div class="elfsight-app-60740641-0fa2-45df-b309-df200b7ae8fa"></div>
+    
+    <script>
+      function openWhatsApp() {
+        // Mostrar el chat de WhatsApp
+        if (typeof ElfWidget !== 'undefined') {
+          ElfWidget.open();
+        }
+      }
+      
+      // Mostrar el chat de WhatsApp automáticamente al cargar la página
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          openWhatsApp();
+        }, 2000); // Espera 2 segundos antes de abrir el chat
+      });
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
